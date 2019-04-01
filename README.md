@@ -101,13 +101,18 @@ read more at [tutorialspoint](https://www.tutorialspoint.com/numpy/numpy_ndarray
 
 Matplotlib is a Python 2D plotting library which produces publication quality figures in a variety of hardcopy formats and interactive environments across platforms. Matplotlib can be used in Python scripts, the Python and IPython shells, the Jupyter notebook, web application servers, and four graphical user interface toolkits.
 
-read more at [tutorialspoint](https://matplotlib.org/tutorials/introductory/pyplot.html#sphx-glr-tutorials-introductory-pyplot-py)
+read more at [matplotlib documentation](https://matplotlib.org/tutorials/introductory/pyplot.html#sphx-glr-tutorials-introductory-pyplot-py)
 
 #### OpenCV
 
 OpenCV was started at Intel in 1999 by Gary Bradsky, and the first release came out in 2000. Vadim Pisarevsky joined Gary Bradsky to manage Intel's Russian software OpenCV team. In 2005, OpenCV was used on Stanley, the vehicle that won the 2005 DARPA Grand Challenge. Later, its active development continued under the support of Willow Garage with Gary Bradsky and Vadim Pisarevsky leading the project. OpenCV now supports a multitude of algorithms related to Computer Vision and Machine Learning and is expanding day by day.
 
+#### Images in Computers
 
+A digital image is composed of M rows and N columns of pixels each storing a value. Pixel values are most often grey levels in the range 0-255(black-white) or R,G,B values. images can easily be represented as matrices. In case of RGB images, a single pixel in a 2D matrice will have 3 x 8bit numbers for R,G,B components. In Gray scaled image, a pixel will contain only a single 8bit number (0-255) which gives the gray scale value
+
+![Image in 2D array](https://blogs.mathworks.com/images/steve/2011/dipum_fig_2_1_a.png)
+[source](https://blogs.mathworks.com/images/steve/2011/dipum_fig_2_1_a.png)
 
 
 ##### Accessing and Modifying pixel values
@@ -120,5 +125,12 @@ img[100,100] = [255,255,255]
 cv2.imshow('IMG',img)
 ```
 
+##### Changing Colorspaces
 
-##### Accessing and Modifying pixel values
+here are more than 150 color-space conversion methods available in OpenCV. But we will look into only two which are most widely used ones, BGR \leftrightarrow Gray and BGR \leftrightarrow HSV.
+
+For color conversion, we use the function ```python cv2.cvtColor(input_image, flag)``` where flag determines the type of conversion.
+
+For BGR to Gray conversion we use the flags ```python cv2.COLOR_BGR2GRAY```  Similarly for BGR to HSV, we use the flag cv2.COLOR_BGR2HSV
+
+read more at [OpenCV documentation](https://opencv-python-tutroals.readthedocs.io/en/latest/py_tutorials/py_tutorials.html)
