@@ -127,7 +127,7 @@ cv2.imshow('IMG',img)
 
 ##### Changing Colorspaces
 
-here are more than 150 color-space conversion methods available in OpenCV. But we will look into only two which are most widely used ones, BGR \leftrightarrow Gray and BGR \leftrightarrow HSV.
+here are more than 150 color-space conversion methods available in OpenCV. But we will look into only two which are most widely used ones, BGR to Gray and BGR to HSV.
 
 For color conversion, we use the function ```python cv2.cvtColor(input_image, flag)``` where flag determines the type of conversion.
 
